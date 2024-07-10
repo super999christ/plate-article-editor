@@ -55,7 +55,9 @@ import {
 import {
   createFontBackgroundColorPlugin,
   createFontColorPlugin,
+  createFontFamilyPlugin,
   createFontSizePlugin,
+  createFontWeightPlugin,
 } from '@udecode/plate-font';
 import {
   createHeadingPlugin,
@@ -198,6 +200,8 @@ export const plugins = createPlugins(
     createFontColorPlugin(),
     createFontBackgroundColorPlugin(),
     createFontSizePlugin(),
+    createFontFamilyPlugin(),
+    createFontWeightPlugin(),
     createHighlightPlugin(),
     createKbdPlugin(),
 
@@ -205,7 +209,7 @@ export const plugins = createPlugins(
     createAlignPlugin({
       inject: {
         props: {
-          validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1, ELEMENT_H2, ELEMENT_H3],
+          validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1, ELEMENT_H2, ELEMENT_H3, ELEMENT_H4, ELEMENT_H5, ELEMENT_H6],
         },
       },
     }),

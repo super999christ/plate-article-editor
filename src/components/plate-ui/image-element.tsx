@@ -34,10 +34,12 @@ export const ImageElement = withHOC(
                   readOnly,
                 }}
               >
-                <ResizeHandle
-                  options={{ direction: 'left' }}
-                  className={mediaResizeHandleVariants({ direction: 'left' })}
-                />
+                {!readOnly && (
+                  <ResizeHandle
+                    options={{ direction: 'left' }}
+                    className={mediaResizeHandleVariants({ direction: 'left' })}
+                  />
+                )}
                 <Image
                   className={cn(
                     'block w-full max-w-full cursor-pointer object-cover px-0',
@@ -47,10 +49,12 @@ export const ImageElement = withHOC(
                   alt=""
                   {...nodeProps}
                 />
-                <ResizeHandle
-                  options={{ direction: 'right' }}
-                  className={mediaResizeHandleVariants({ direction: 'right' })}
-                />
+                {!readOnly && (
+                  <ResizeHandle
+                    options={{ direction: 'right' }}
+                    className={mediaResizeHandleVariants({ direction: 'right' })}
+                  />
+                )}
               </Resizable>
 
               <Caption align={align} style={{ width }}>

@@ -8,7 +8,7 @@ import {
   insertEmptyElement,
   useEditorRef,
 } from '@udecode/plate-common';
-import { ELEMENT_H1, ELEMENT_H2, ELEMENT_H3 } from '@udecode/plate-heading';
+import { ELEMENT_H1, ELEMENT_H2, ELEMENT_H3, ELEMENT_H4, ELEMENT_H5, ELEMENT_H6 } from '@udecode/plate-heading';
 import { ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
 
 import { Icons } from '@/components/icons';
@@ -23,6 +23,12 @@ import {
   useOpenState,
 } from './dropdown-menu';
 import { ToolbarButton } from './toolbar';
+import { ELEMENT_TABLE } from '@udecode/plate-table';
+import { ELEMENT_HR } from '@udecode/plate-horizontal-rule';
+import { ELEMENT_CODE_BLOCK } from '@udecode/plate-code-block';
+import { ELEMENT_IMAGE, ELEMENT_MEDIA_EMBED } from '@udecode/plate-media';
+import { ELEMENT_EXCALIDRAW } from '@udecode/plate-excalidraw';
+import { ELEMENT_LINK } from '@udecode/plate-link';
 
 const items = [
   {
@@ -53,77 +59,89 @@ const items = [
         icon: Icons.h3,
       },
       {
+        value: ELEMENT_H4,
+        label: 'Heading 4',
+        description: 'Heading 4',
+        icon: Icons.h4,
+      },
+      {
+        value: ELEMENT_H5,
+        label: 'Heading 5',
+        description: 'Heading 5',
+        icon: Icons.h5,
+      },
+      {
         value: ELEMENT_BLOCKQUOTE,
         label: 'Quote',
         description: 'Quote (⌘+⇧+.)',
         icon: Icons.blockquote,
       },
+      {
+        value: ELEMENT_TABLE,
+        label: 'Table',
+        description: 'Table',
+        icon: Icons.table,
+      },
+      {
+        value: 'ul',
+        label: 'Bulleted list',
+        description: 'Bulleted list',
+        icon: Icons.ul,
+      },
+      {
+        value: 'ol',
+        label: 'Numbered list',
+        description: 'Numbered list',
+        icon: Icons.ol,
+      },
+      {
+        value: ELEMENT_HR,
+        label: 'Divider',
+        description: 'Divider (---)',
+        icon: Icons.row,
+      },
+    ],
+  },
+  {
+    label: 'Media',
+    items: [
+      {
+        value: ELEMENT_CODE_BLOCK,
+        label: 'Code',
+        description: 'Code (```)',
+        icon: Icons.codeblock,
+      },
+      {
+        value: ELEMENT_IMAGE,
+        label: 'Image',
+        description: 'Image',
+        icon: Icons.image,
+      },
       // {
-      //   value: ELEMENT_TABLE,
-      //   label: 'Table',
-      //   description: 'Table',
-      //   icon: Icons.table,
+      //   value: ELEMENT_MEDIA_EMBED,
+      //   label: 'Embed',
+      //   description: 'Embed',
+      //   icon: Icons.moon,
       // },
       // {
-      //   value: 'ul',
-      //   label: 'Bulleted list',
-      //   description: 'Bulleted list',
-      //   icon: Icons.ul,
-      // },
-      // {
-      //   value: 'ol',
-      //   label: 'Numbered list',
-      //   description: 'Numbered list',
-      //   icon: Icons.ol,
-      // },
-      // {
-      //   value: ELEMENT_HR,
-      //   label: 'Divider',
-      //   description: 'Divider (---)',
-      //   icon: Icons.hr,
+      //   value: ELEMENT_EXCALIDRAW,
+      //   label: 'Excalidraw',
+      //   description: 'Excalidraw',
+      //   icon: Icons.logo,
       // },
     ],
   },
-  // {
-  //   label: 'Media',
-  //   items: [
-  //     {
-  //       value: ELEMENT_CODE_BLOCK,
-  //       label: 'Code',
-  //       description: 'Code (```)',
-  //       icon: Icons.codeblock,
-  //     },
-  //     {
-  //       value: ELEMENT_IMAGE,
-  //       label: 'Image',
-  //       description: 'Image',
-  //       icon: Icons.image,
-  //     },
-  //     {
-  //       value: ELEMENT_MEDIA_EMBED,
-  //       label: 'Embed',
-  //       description: 'Embed',
-  //       icon: Icons.embed,
-  //     },
-  //     {
-  //       value: ELEMENT_EXCALIDRAW,
-  //       label: 'Excalidraw',
-  //       description: 'Excalidraw',
-  //       icon: Icons.excalidraw,
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: 'Inline',
-  //   items: [
-  //     {
-  //       value: ELEMENT_LINK,
-  //       label: 'Link',
-  //       description: 'Link',
-  //       icon: Icons.link,
-  //     },
-  //   ],
-  // },
+  {
+    label: 'Inline',
+    items: [
+      {
+        value: ELEMENT_LINK,
+        label: 'Link',
+        description: 'Link',
+        icon: Icons.link,
+      },
+    ],
+  },
 ];
 
 export function InsertDropdownMenu(props: DropdownMenuProps) {
