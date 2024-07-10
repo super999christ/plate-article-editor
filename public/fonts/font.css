@@ -1,0 +1,147 @@
+/*P22Mackinac Fonts*/
+@font-face {
+  font-family: 'P22';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("P22/P22Mackinac-Book-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'P22';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("P22/P22Mackinac-Medium-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'P22';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("P22/P22Mackinac-Bold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'P22';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("P22/P22Mackinac-BookItalic-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'P22';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("P22/P22Mackinac-MediumItalic-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'P22';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("P22/P22Mackinac-BoldItalic-webfont.woff2") format("woff2");
+}
+
+/*TTFirsText Fonts*/
+@font-face {
+  font-family: 'TTFirsText';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("TTFirsText/TT_Firs_Text_Normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsText';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("TTFirsText/TT_Firs_Text_Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsText';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("TTFirsText/TT_Firs_Text_Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsText';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("TTFirsText/TT_Firs_Text_Normal_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsText';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("TTFirsText/TT_Firs_Text_Medium_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsText';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("TTFirsText/TT_Firs_Text_Bold_Italic.woff2") format("woff2");
+}
+
+/*TTFirsNeue Fonts*/
+@font-face {
+  font-family: 'TTFirsNeue';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("TTFirsNeue/TT_Firs_Neue_Normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("TTFirsNeue/TT_Firs_Neue_Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("TTFirsNeue/TT_Firs_Neue_Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("TTFirsNeue/TT_Firs_Neue_Normal_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("TTFirsNeue/TT_Firs_Neue_Medium_Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'TTFirsNeue';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("TTFirsNeue/TT_Firs_Neue_Bold_Italic.woff2") format("woff2");
+}
+

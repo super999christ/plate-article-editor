@@ -57,6 +57,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         heading: ['var(--font-heading)', ...fontFamily.sans],
+        'p22': ['P22'],
+        'firsneue': ['TTFirsNeue'],
+        'firstext': ['TTFirsText']
       },
       keyframes: {
         'accordion-down': {
