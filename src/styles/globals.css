@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../../public/fonts/font.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -75,4 +77,28 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.slate-SelectionArea .slate-h1 {
+  @apply !font-normal !text-[64px] !leading-[80px] !tracking-[-0.02em] m-0 max-sm:!font-medium max-sm:!text-[32px] max-sm:!leading-[44px] font-p22;
+}
+
+.slate-SelectionArea .slate-h2 {
+  @apply !font-medium !text-[40px] !leading-[56px] !tracking-[-0.02em] m-0 max-sm:!text-[32px] max-sm:!leading-[44px] font-p22;
+}
+
+.slate-SelectionArea .slate-h3 {
+  @apply !font-medium !text-[32px] !leading-[44px] !tracking-[-0.02em] m-0 max-sm:!text-[24px] max-sm:!leading-[30px] max-sm:!tracking-[-0.01em] font-p22;
+}
+
+.slate-SelectionArea .slate-h4 {
+  @apply !font-medium !text-[24px] !leading-[30px] !tracking-[-0.01em] m-0 max-sm:!text-[20px] max-sm:!leading-[25px] font-p22;
+}
+
+.slate-SelectionArea .slate-h5 {
+  @apply !font-medium !text-[12px] !leading-[15px] !tracking-[0.08em] m-0 max-sm:!text-[20px] max-sm:!leading-[25px] font-firstext;
+}
+
+.slate-SelectionArea .slate-p {
+  @apply !font-normal !text-[18px] !leading-[27px] m-0 max-sm:!text-[16px] max-sm:!leading-[24px] font-firstext;
 }
