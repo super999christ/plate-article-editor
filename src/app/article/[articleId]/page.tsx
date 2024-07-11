@@ -1,5 +1,6 @@
 import { strapiClient } from "@/lib/strapi/strapi";
 import ArticleView from "@/views/ArticleView";
+import { cookies } from "next/headers";
 
 interface IPageProps {
   params: {
@@ -8,6 +9,8 @@ interface IPageProps {
 }
 
 export default async function ArticleDetailPage({ params }: IPageProps) {
-  const { data: article } = (await strapiClient.get(`/articles/${params.articleId}?populate[background][populate]=*&populate[title][populate]=*&seed=${Math.random()}`)).data;
+  cookies();
+
+  const { data: article } = (await strapiClient.get(`/articles/${params.articleId}?populate[background][populate]=*&populate[title][populate]=*`)).data;
   return <ArticleView article={article} />;
 }

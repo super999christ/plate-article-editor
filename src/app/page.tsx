@@ -1,7 +1,10 @@
 import { strapiClient } from "@/lib/strapi/strapi";
 import MainView from "@/views/MainView";
+import { cookies } from "next/headers";
 
 export default async function IndexPage() {
-  const { data: articles } = (await strapiClient.get(`/articles?populate[background][populate]=*&populate[title][populate]=*&sort=id:asc&publicationState=preview&seed=${Math.random()}`)).data;
+  cookies();
+
+  const { data: articles } = (await strapiClient.get(`/articles?populate[background][populate]=*&populate[title][populate]=*&sort=id:asc&publicationState=preview`)).data;
   return <MainView articles={articles} />;  
 }
