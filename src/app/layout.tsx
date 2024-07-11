@@ -35,6 +35,8 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
+export const fetchCache = 'force-no-store';
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>

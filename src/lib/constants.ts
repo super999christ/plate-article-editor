@@ -4,5 +4,3 @@ export const Environment = {
   STRAPI_BASE_URL: process.env.NEXT_PUBLIC_STRAPI_BASE_URL as string,
   CLOUDFRONT_BASE_URL: process.env.NEXT_PUBLIC_CLOUDFRONT_BASE_URL as string
 };
-
-export const fetchCache = 'force-no-store';
