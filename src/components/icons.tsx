@@ -60,6 +60,8 @@ import {
   Underline,
   Ungroup,
   WrapText,
+  Type,
+  Video,
   X,
 } from 'lucide-react';
 
@@ -198,6 +200,7 @@ export const Icons = {
   h5: Heading5,
   h6: Heading6,
   image: Image,
+  video: Video,
   indent: Indent,
   italic: Italic,
   kbd: Keyboard,
@@ -217,6 +220,7 @@ export const Icons = {
   superscript: Superscript,
   table: Table,
   text: Text,
+  type: Type,
   trash: Trash,
   ul: List,
   underline: Underline,

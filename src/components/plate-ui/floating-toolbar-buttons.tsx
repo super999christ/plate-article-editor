@@ -15,6 +15,7 @@ import { LinkToolbarButton } from '@/components/plate-ui/link-toolbar-button';
 import { MarkToolbarButton } from './mark-toolbar-button';
 import { MoreDropdownMenu } from './more-dropdown-menu';
 import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
+import { FontSizeDropdownMenu } from './font-size-dropdown-menu';
 
 export function FloatingToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -24,7 +25,7 @@ export function FloatingToolbarButtons() {
       {!readOnly && (
         <>
           <TurnIntoDropdownMenu />
-
+          <FontSizeDropdownMenu />
           <MarkToolbarButton nodeType={MARK_BOLD} tooltip="Bold (⌘+B)">
             <Icons.bold />
           </MarkToolbarButton>

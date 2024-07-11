@@ -98,7 +98,7 @@ const items = [
         value: ELEMENT_HR,
         label: 'Divider',
         description: 'Divider (---)',
-        icon: Icons.row,
+        icon: Icons.minus,
       },
     ],
   },
@@ -117,12 +117,12 @@ const items = [
         description: 'Image',
         icon: Icons.image,
       },
-      // {
-      //   value: ELEMENT_MEDIA_EMBED,
-      //   label: 'Embed',
-      //   description: 'Embed',
-      //   icon: Icons.moon,
-      // },
+      {
+        value: ELEMENT_MEDIA_EMBED,
+        label: 'Embed',
+        description: 'Embed',
+        icon: Icons.video,
+      },
       // {
       //   value: ELEMENT_EXCALIDRAW,
       //   label: 'Excalidraw',
