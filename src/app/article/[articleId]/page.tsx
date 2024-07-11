@@ -8,6 +8,6 @@ interface IPageProps {
 }
 
 export default async function ArticleDetailPage({ params }: IPageProps) {
-  const { data: article } = (await strapiClient.get(`/articles/${params.articleId}?populate[background][populate]=*&populate[title][populate]=*`)).data;
+  const { data: article } = (await strapiClient.get(`/articles/${params.articleId}?populate[background][populate]=*&populate[title][populate]=*&seed=${Math.random()}`)).data;
   return <ArticleView article={article} />;
 }
