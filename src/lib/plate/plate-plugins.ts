@@ -157,7 +157,7 @@ import { TodoListElement } from '@/components/plate-ui/todo-list-element';
 import { withDraggables } from '@/components/plate-ui/with-draggables';
 import { TabbableElement } from '@/components/tabbable-element';
 import { VideoElement } from '@/components/plate-ui/video-element';
-import { createCustomFontPlugin, FONT_SIZE_10, FONT_SIZE_11, FONT_SIZE_12, FONT_SIZE_14, FONT_SIZE_16, FONT_SIZE_18, FONT_SIZE_20, FONT_SIZE_22, FONT_SIZE_24, FONT_SIZE_26, FONT_SIZE_28, FONT_SIZE_36, FONT_SIZE_48, FONT_SIZE_72, FONT_SIZE_8, FONT_SIZE_9 } from '../plugins/createCustomFontPlugin';
+import { createCustomFontSizePlugin } from '../plugins/createCustomFontSizePlugin';
 
 const resetBlockTypesCommonRule = {
   types: [ELEMENT_BLOCKQUOTE, ELEMENT_TODO_LI],
@@ -206,7 +206,13 @@ export const plugins = createPlugins(
     createFontWeightPlugin(),
     createHighlightPlugin(),
     createKbdPlugin(),
-    createCustomFontPlugin(),
+    createCustomFontSizePlugin({
+      inject: {
+        props: {
+          validTypes: [ELEMENT_PARAGRAPH, ELEMENT_H1, ELEMENT_H2, ELEMENT_H3, ELEMENT_H4, ELEMENT_H5, ELEMENT_H6]
+        }
+      }
+    }),
 
     // Block Style
     createAlignPlugin({
@@ -421,22 +427,6 @@ export const plugins = createPlugins(
         [MARK_SUPERSCRIPT]: withProps(PlateLeaf, { as: 'sup' }),
         [MARK_UNDERLINE]: withProps(PlateLeaf, { as: 'u' }),
         [MARK_COMMENT]: CommentLeaf,
-        [FONT_SIZE_8]: withProps(PlateLeaf, { style: { fontSize: '8px', lineHeight: '12px' } }),
-        [FONT_SIZE_9]: withProps(PlateLeaf, { style: { fontSize: '9px', lineHeight: '13.5px' } }),
-        [FONT_SIZE_10]: withProps(PlateLeaf, { style: { fontSize: '10px', lineHeight: '15px' } }),
-        [FONT_SIZE_11]: withProps(PlateLeaf, { style: { fontSize: '11px', lineHeight: '16.5px' } }),
-        [FONT_SIZE_12]: withProps(PlateLeaf, { style: { fontSize: '12px', lineHeight: '18px' } }),
-        [FONT_SIZE_14]: withProps(PlateLeaf, { style: { fontSize: '14px', lineHeight: '21px' } }),
-        [FONT_SIZE_16]: withProps(PlateLeaf, { style: { fontSize: '16px', lineHeight: '24px' } }),
-        [FONT_SIZE_18]: withProps(PlateLeaf, { style: { fontSize: '18px', lineHeight: '27px' } }),
-        [FONT_SIZE_20]: withProps(PlateLeaf, { style: { fontSize: '20px', lineHeight: '30px' } }),
-        [FONT_SIZE_22]: withProps(PlateLeaf, { style: { fontSize: '22px', lineHeight: '34px' } }),
-        [FONT_SIZE_24]: withProps(PlateLeaf, { style: { fontSize: '24px', lineHeight: '36px' } }),
-        [FONT_SIZE_26]: withProps(PlateLeaf, { style: { fontSize: '26px', lineHeight: '39px' } }),
-        [FONT_SIZE_28]: withProps(PlateLeaf, { style: { fontSize: '28px', lineHeight: '42px' } }),
-        [FONT_SIZE_36]: withProps(PlateLeaf, { style: { fontSize: '36px', lineHeight: '44px' } }),
-        [FONT_SIZE_48]: withProps(PlateLeaf, { style: { fontSize: '48px', lineHeight: '56px' } }),
-        [FONT_SIZE_72]: withProps(PlateLeaf, { style: { fontSize: '72px', lineHeight: '82px' } }),
       })
     ),
   }
