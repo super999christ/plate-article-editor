@@ -5,6 +5,6 @@ import { cookies } from "next/headers";
 export default async function IndexPage() {
   cookies();
 
-  const { data: articles } = (await strapiClient.get(`/articles?populate[background][populate]=*&populate[title][populate]=*&sort=id:asc&publicationState=preview`)).data;
+  const { data: articles } = (await strapiClient.get(`/articles?populate=*&sort=id:asc&publicationState=preview`)).data;
   return <MainView articles={articles} />;  
 }

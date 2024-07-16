@@ -39,12 +39,6 @@ export default function MainView({ articles }: IProps) {
                 scope="col"
                 className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
               >
-                Subtitle
-              </th>
-              <th
-                scope="col"
-                className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-              >
                 State
               </th>
               <th scope="col" className="relative py-3.5 pl-3 pr-4">
@@ -59,32 +53,18 @@ export default function MainView({ articles }: IProps) {
                   {index + 1}
                 </td>
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                  {article.attributes.title.text}
-                </td>
-                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                  {article.attributes.subtitle}
+                  {article.attributes.title}
                 </td>
                 <td className={`whitespace-nowrap px-3 py-4 text-sm ${article.attributes.publishedAt ? 'text-green-500' : 'text-yellow-700'}`}>
                   {article.attributes.publishedAt ? 'Published' : 'Draft'}
                 </td>
                 <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium">
-                  {!article.attributes.url && (
-                    <a
-                      href={`/article/${article.id}`}
-                      className="text-indigo-600 hover:text-indigo-900"
-                    >
-                      Edit
-                    </a>
-                  )}
-                  {article.attributes.url && (
-                    <Link
-                      href={article.attributes.url}
-                      className="text-green-600 hover:text-green-900"
-                      target='_blank'
-                    >
-                      View
-                    </Link>
-                  )}
+                  <a
+                    href={`/article/${article.id}`}
+                    className="text-indigo-600 hover:text-indigo-900"
+                  >
+                    Edit
+                  </a>
                 </td>
               </tr>
             ))}
