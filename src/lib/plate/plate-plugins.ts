@@ -158,6 +158,8 @@ import { withDraggables } from '@/components/plate-ui/with-draggables';
 import { TabbableElement } from '@/components/tabbable-element';
 import { VideoElement } from '@/components/plate-ui/video-element';
 import { createCustomFontSizePlugin } from '../plugins/createCustomFontSizePlugin';
+import { createSpacingPlugin, ELEMENT_S1, ELEMENT_S2, ELEMENT_S3, ELEMENT_S4, ELEMENT_S5, ELEMENT_S6 } from '../plugins/spacing';
+import { SpacingElement } from '@/components/plate-ui/spacing-element';
 
 const resetBlockTypesCommonRule = {
   types: [ELEMENT_BLOCKQUOTE, ELEMENT_TODO_LI],
@@ -175,6 +177,7 @@ export const plugins = createPlugins(
     // Nodes
     createParagraphPlugin(),
     createHeadingPlugin(),
+    createSpacingPlugin(),
     createBlockquotePlugin(),
     createCodeBlockPlugin(),
     createHorizontalRulePlugin(),
@@ -402,6 +405,12 @@ export const plugins = createPlugins(
         [ELEMENT_H4]: withProps(HeadingElement, { variant: 'h4' }),
         [ELEMENT_H5]: withProps(HeadingElement, { variant: 'h5' }),
         [ELEMENT_H6]: withProps(HeadingElement, { variant: 'h6' }),
+        [ELEMENT_S1]: withProps(SpacingElement, { variant: 's1' }),
+        [ELEMENT_S2]: withProps(SpacingElement, { variant: 's2' }),
+        [ELEMENT_S3]: withProps(SpacingElement, { variant: 's3' }),
+        [ELEMENT_S4]: withProps(SpacingElement, { variant: 's4' }),
+        [ELEMENT_S5]: withProps(SpacingElement, { variant: 's5' }),
+        [ELEMENT_S6]: withProps(SpacingElement, { variant: 's6' }),
         [ELEMENT_IMAGE]: ImageElement,
         [ELEMENT_LI]: withProps(PlateElement, { as: 'li' }),
         [ELEMENT_LINK]: LinkElement,

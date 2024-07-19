@@ -29,6 +29,7 @@ import { ELEMENT_CODE_BLOCK } from '@udecode/plate-code-block';
 import { ELEMENT_IMAGE, ELEMENT_MEDIA_EMBED } from '@udecode/plate-media';
 import { ELEMENT_EXCALIDRAW } from '@udecode/plate-excalidraw';
 import { ELEMENT_LINK } from '@udecode/plate-link';
+import { ELEMENT_S1, ELEMENT_S2, ELEMENT_S3, ELEMENT_S4, ELEMENT_S5, ELEMENT_S6 } from '@/lib/plugins/spacing';
 
 const items = [
   {
@@ -69,6 +70,42 @@ const items = [
         label: 'Heading 5',
         description: 'Heading 5',
         icon: Icons.h5,
+      },
+      {
+        value: ELEMENT_S1,
+        label: 'Spacing 1 <80px>',
+        description: 'Spacing 1 <80px>',
+        icon: Icons.s1,
+      },
+      {
+        value: ELEMENT_S2,
+        label: 'Spacing 2 <62px>',
+        description: 'Spacing  <62px>',
+        icon: Icons.s2,
+      },
+      {
+        value: ELEMENT_S3,
+        label: 'Spacing 3 <40px>',
+        description: 'Spacing 3 <40px>',
+        icon: Icons.s3,
+      },
+      {
+        value: ELEMENT_S4,
+        label: 'Spacing 4 <24px>',
+        description: 'Spacing 4 <24px>',
+        icon: Icons.s4,
+      },
+      {
+        value: ELEMENT_S5,
+        label: 'Spacing 5 <16px>',
+        description: 'Spacing 5 <16px>',
+        icon: Icons.s5,
+      },
+      {
+        value: ELEMENT_S6,
+        label: 'Spacing 6 <8px>',
+        description: 'Spacing 6 <8px>',
+        icon: Icons.s6,
       },
       {
         value: ELEMENT_BLOCKQUOTE,

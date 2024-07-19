@@ -8,11 +8,18 @@ import {
 } from '@udecode/plate-common';
 import { ELEMENT_H1 } from '@udecode/plate-heading';
 import { ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
+import { ELEMENT_S1, ELEMENT_S2, ELEMENT_S3, ELEMENT_S4, ELEMENT_S5, ELEMENT_S6 } from '@/lib/plugins/spacing';
 
 export const Placeholder = (props: PlaceholderProps) => {
   const { children, placeholder, nodeProps } = props;
 
   const { enabled } = usePlaceholderState(props);
+
+  let customClassName = 'before:opacity-30';
+  if (placeholder.includes("8px"))
+    customClassName = "before:mt-[-8px] before:opacity-80";
+  else if (placeholder.includes("Spacing"))
+    customClassName = "before:mt-[-4px] before:opacity-80";
 
   return React.Children.map(children, (child) => {
     return React.cloneElement(child, {
@@ -21,7 +28,7 @@ export const Placeholder = (props: PlaceholderProps) => {
         ...nodeProps,
         className: cn(
           enabled &&
-            'before:absolute before:cursor-text before:opacity-30 before:content-[attr(placeholder)]'
+            `before:absolute before:cursor-text ${customClassName} before:content-[attr(placeholder)]`
         ),
         placeholder,
       },
@@ -45,6 +52,36 @@ export const withPlaceholders = (components: any) =>
     {
       key: ELEMENT_H1,
       placeholder: 'Untitled',
+      hideOnBlur: false,
+    },
+    {
+      key: ELEMENT_S1,
+      placeholder: 'Spacing-80px',
+      hideOnBlur: false,
+    },
+    {
+      key: ELEMENT_S2,
+      placeholder: 'Spacing-64px',
+      hideOnBlur: false,
+    },
+    {
+      key: ELEMENT_S3,
+      placeholder: 'Spacing-40px',
+      hideOnBlur: false,
+    },
+    {
+      key: ELEMENT_S4,
+      placeholder: 'Spacing-24px',
+      hideOnBlur: false,
+    },
+    {
+      key: ELEMENT_S5,
+      placeholder: 'Spacing-16px',
+      hideOnBlur: false,
+    },
+    {
+      key: ELEMENT_S6,
+      placeholder: 'Spacing-8px',
       hideOnBlur: false,
     },
   ]);

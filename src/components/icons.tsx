@@ -62,6 +62,7 @@ import {
   WrapText,
   Type,
   Video,
+  BetweenHorizonalEnd,
   X,
 } from 'lucide-react';
 
@@ -199,6 +200,12 @@ export const Icons = {
   h4: Heading4,
   h5: Heading5,
   h6: Heading6,
+  s1: BetweenHorizonalEnd,
+  s2: BetweenHorizonalEnd,
+  s3: BetweenHorizonalEnd,
+  s4: BetweenHorizonalEnd,
+  s5: BetweenHorizonalEnd,
+  s6: BetweenHorizonalEnd,
   image: Image,
   video: Video,
   indent: Indent,
