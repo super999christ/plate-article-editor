@@ -79,8 +79,8 @@ const items = [
       },
       {
         value: ELEMENT_S2,
-        label: 'Spacing 2 <62px>',
-        description: 'Spacing  <62px>',
+        label: 'Spacing 2 <64px>',
+        description: 'Spacing  <64px>',
         icon: Icons.s2,
       },
       {
