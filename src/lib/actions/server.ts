@@ -1,9 +1,11 @@
-import { cookies } from "next/headers";
-import { decryptString } from "../utils";
+import { NextApiRequest } from 'next';
+import { cookies } from 'next/headers';
+import { decryptString } from '../utils';
 
-export const getCurrentUser = () => {
-  const cookieStore = cookies();
-  const value = cookieStore.get('session')?.value || '';
+export const getCurrentUser = (req?: NextApiRequest) => {
+  const value = (req
+    ? req.cookies.session
+    : cookies().get('session')?.value) || '';
   try {
     return JSON.parse(decryptString(value)).user;
   } catch (err) {

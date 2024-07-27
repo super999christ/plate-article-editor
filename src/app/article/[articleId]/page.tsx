@@ -1,7 +1,6 @@
 import { getCurrentUser } from "@/lib/actions/server";
 import { strapiClient } from "@/lib/strapi/strapi";
 import ArticleView from "@/views/ArticleView";
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 interface IPageProps {

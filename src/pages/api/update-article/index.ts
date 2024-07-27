@@ -1,3 +1,4 @@
+import { getCurrentUser } from '@/lib/actions/server';
 import { strapiClient } from '@/lib/strapi/strapi';
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -8,6 +9,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(405).json({ message: 'Method not supported' });
   }
   try {
+    const user = getCurrentUser(req);
+    if (!user) {
+      throw Error("User is not authenticated");
+    }
     const { blogContent, articleId } = req.body;
     await strapiClient.put(`/articles/${articleId}`, { data: { blogContent } });
     return res.status(200).json({ message: 'Successfully saved the article content.' });
