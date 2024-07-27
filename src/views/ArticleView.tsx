@@ -36,7 +36,7 @@ export default function ArticleView({ article }: IProps) {
   };
 
   const onCancel = () => {
-    router.push('/');
+    router.push('/dashboard');
   };
 
   const getInitialValue = () => {

@@ -7,9 +7,11 @@ import { SiteHeader } from '@/components/site/site-header';
 import { TailwindIndicator } from '@/components/site/tailwind-indicator';
 import { ThemeProvider } from '@/components/site/theme-provider';
 
+import 'react-toastify/dist/ReactToastify.css';
 import '@/styles/globals.css';
 
 import { Metadata, Viewport } from 'next';
+import { ToastContainer } from 'react-toastify';
 
 export const metadata: Metadata = {
   title: {
@@ -49,6 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
+          <ToastContainer position='top-center' autoClose={5000} />
           <ThemeProvider attribute="class" defaultTheme="light">
             <TooltipProvider
               disableHoverableContent

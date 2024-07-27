@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-
 import { ICArticle } from '@/lib/types';
 
 interface IProps {

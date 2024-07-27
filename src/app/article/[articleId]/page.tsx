@@ -1,6 +1,8 @@
+import { getCurrentUser } from "@/lib/actions/server";
 import { strapiClient } from "@/lib/strapi/strapi";
 import ArticleView from "@/views/ArticleView";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 interface IPageProps {
   params: {
@@ -9,7 +11,10 @@ interface IPageProps {
 }
 
 export default async function ArticleDetailPage({ params }: IPageProps) {
-  cookies();
+  const user = getCurrentUser();
+  if (!user) {
+    redirect('/login');
+  }
 
   const { data: article } = (await strapiClient.get(`/articles/${params.articleId}?populate=*`)).data;
   return <ArticleView article={article} />;

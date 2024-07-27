@@ -1,10 +1,7 @@
-import { strapiClient } from "@/lib/strapi/strapi";
-import MainView from "@/views/MainView";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 export default async function IndexPage() {
   cookies();
-
-  const { data: articles } = (await strapiClient.get(`/articles?populate=*&sort=id:asc&publicationState=preview`)).data;
-  return <MainView articles={articles} />;  
+  redirect('/dashboard');
 }

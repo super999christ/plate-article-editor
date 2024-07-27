@@ -33,12 +33,8 @@ const SpacingElementVariants = withVariants(PlateElement, spacingVariants, [
 
 export const SpacingElement = withRef<typeof SpacingElementVariants>(
   ({ variant = 's1', children, ...props }, ref) => {
-    const { element, editor } = props;
-
     const Element = 'div';
     const className = spacingClassNames[variant || 's1'];
-
-    console.log({ children })
 
     return (
       <SpacingElementVariants
